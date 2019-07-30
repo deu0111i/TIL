@@ -1,0 +1,18 @@
+class Person:
+    population = 0
+    
+    def __init__(self, name, age):
+        Person.population += 1
+        self.name = name
+        self.age = age
+        
+    
+    def greeting(self):
+        print(f'{self.name} 입니다. 반갑습니다!')
+        
+    
+    def __gt__(self, other):
+        if self.age > other.age:
+            return f'내가 {other.name} 보다 나이가 많아용'
+        else:
+            return f'내가 {other.name} 보다 어려용'
